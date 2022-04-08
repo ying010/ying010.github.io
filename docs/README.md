@@ -3,14 +3,11 @@ home: true
 title: 首页
 heroImage: /images/hero.png
 actions:
-- text: 快速上手
-  link: /md/study
+- text: 语言学习
+  link: /md/study/README.md
   type: primary
-- text: 项目简介
-  link: /zh/guide/
-  type: secondary
-- text: 项目简介
-  link: /zh/guide/
+- text: 工具使用
+  link: /md/tools/IDE/IDEA/getting-started.md
   type: secondary
 features:
   - title: 简洁至上

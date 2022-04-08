@@ -1,3 +1,4 @@
+# npm
 ## npm全局安装路径
 
 - 通过`npm config get prefix`查看安装路径

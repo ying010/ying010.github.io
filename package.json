@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Note Powered By VuePress2",
   "main": "index.js",
-  "author": "wzy <992388202@qq.com>",
+  "author": "wzy",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.38"

@@ -1,6 +1,4 @@
-
-
-# 安装插件
+# IDEA快速开始
 
 ## Alibaba java Coding Guidelines
 
