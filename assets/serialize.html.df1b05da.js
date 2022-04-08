@@ -1,1 +1,0 @@
-const t={key:"v-384c7b42",path:"/md/study/java/basic/serialize.html",title:"JSON\u914D\u7F6E",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649389449e3,contributors:[{name:"wzy",email:"992388202@qq.com",commits:1}]},filePathRelative:"md/study/java/basic/serialize.md"};export{t as data};

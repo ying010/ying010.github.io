@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t,a,e as o}from"./app.f4f3479c.js";const r={},c={id:"json\u914D\u7F6E",tabindex:"-1"},_=a("a",{class:"header-anchor",href:"#json\u914D\u7F6E","aria-hidden":"true"},"#",-1),n=o(" JSON\u914D\u7F6E"),i=[_,n];function d(h,l){return s(),t("h1",c,i)}var m=e(r,[["render",d],["__file","serialize.html.vue"]]);export{m as default};
