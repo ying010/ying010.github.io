@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as r,e as a}from"./app.f4f3479c.js";const o={},s={id:"rect",tabindex:"-1"},_=r("a",{class:"header-anchor",href:"#rect","aria-hidden":"true"},"#",-1),n=a(" Rect"),d=[_,n];function h(i,f){return t(),c("h1",s,d)}var m=e(o,[["render",h],["__file","rect.html.vue"]]);export{m as default};

@@ -1,0 +1,1 @@
+const t={key:"v-3d05ba61",path:"/md/study/front/Vue/rect.html",title:"Rect",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649389449e3,contributors:[{name:"wzy",email:"992388202@qq.com",commits:1}]},filePathRelative:"md/study/front/Vue/rect.md"};export{t as data};

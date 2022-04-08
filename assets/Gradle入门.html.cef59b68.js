@@ -1,0 +1,1 @@
+const e={key:"v-2a7e6d95",path:"/md/study/%E5%B7%A5%E5%85%B7/Gradle/Gradle%E5%85%A5%E9%97%A8.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649389449e3,contributors:[{name:"wzy",email:"992388202@qq.com",commits:1}]},filePathRelative:"md/study/\u5DE5\u5177/Gradle/Gradle\u5165\u95E8.md"};export{e as data};

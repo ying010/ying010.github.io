@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.38">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="ico" href="https://vuejs.org/images/logo.png"><title>VuePress2</title><meta name="description" content="Just playing around">
+    <link rel="modulepreload" href="/vp2Note/assets/app.f4f3479c.js"><link rel="modulepreload" href="/vp2Note/assets/上线.html.eeec25be.js"><link rel="modulepreload" href="/vp2Note/assets/上线.html.4a3ac684.js">
+    <link rel="stylesheet" href="/vp2Note/assets/style.59250a24.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/vp2Note/" class=""><img class="logo" src="https://vuejs.org/images/logo.png" alt="VuePress2"><span class="site-name can-hide">VuePress2</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><!----><!--[--><!--]--><!----><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><div class="language-mysql ext-mysql line-numbers-mode"><pre class="language-mysql"><code>CREATE TABLE `mambike_dealer`.`t_try_bike_image_set` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `bike_type_code` varchar(20) COLLATE utf8_bin DEFAULT NULL COMMENT &#39;车型编码&#39;,
+  `describe` text COLLATE utf8_bin COMMENT &#39;描述&#39;,
+  `sort` int(2) DEFAULT NULL COMMENT &#39;排序&#39;,
+  `create_time` datetime DEFAULT NULL COMMENT &#39;创建时间&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;更新时间&#39;,
+  `valid` int(11) DEFAULT NULL COMMENT &#39;是否有效 1有效 0无效&#39;,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT COMMENT=&#39;预约试驾图片车型表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_bike_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;id&#39;,
+  `bike_image_set_id` int(11) DEFAULT NULL COMMENT &#39;预约试驾图片车型表id&#39;,
+  `media_type` tinyint(3) DEFAULT NULL COMMENT &#39;图片类型（1：icon，2：商品大图，3：商品详情图，4：商品介绍视频）&#39;,
+  `path` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT &#39;商品媒体文件路径&#39;,
+  `available` tinyint(2) DEFAULT &#39;1&#39; COMMENT &#39;是否可用（0：否，1：是）&#39;,
+  `sort` int(2) DEFAULT NULL COMMENT &#39;排序&#39;,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT=&#39;预约试驾车型图片表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_area` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `province` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;省编码&#39;,
+  `province_name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;省名称&#39;,
+  `city` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;市编码&#39;,
+  `city_name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;市名称&#39;,
+  `status` tinyint(2) DEFAULT &#39;1&#39; COMMENT &#39;状态（0：无效，1：有效）&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `creater` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;创建人&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;修改时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾服务区域配置表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_area_shopper` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键id&#39;,
+  `area_id` int(11) DEFAULT NULL COMMENT &#39;服务区域id&#39;,
+  `shopper_id` int(11) DEFAULT NULL COMMENT &#39;导购id&#39;,
+  `status` tinyint(2) DEFAULT &#39;1&#39; COMMENT &#39;状态（0：无效，1：有效）&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;服务区域与导购关联关系表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_evaluate` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT &#39;0&#39; COMMENT &#39;上一个评价的Id，0表示第一条评价；允许对评价的内容进行评价时可用&#39;,
+  `order_no` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT &#39;订单号&#39;,
+  `creator` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;创建人&#39;,
+  `creator_name` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT &#39;创建人姓名&#39;,
+  `creator_phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT &#39;创建人手机号&#39;,
+  `evaluate_level` smallint(2) NOT NULL DEFAULT &#39;5&#39; COMMENT &#39;评价等级1-5&#39;,
+  `evaluate_content` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT &#39;&#39; COMMENT &#39;评价内容&#39;,
+  `delete_status` smallint(2) NOT NULL DEFAULT &#39;1&#39; COMMENT &#39;删除状态 0：已删除 1：未删除&#39;,
+  `delete_time` datetime DEFAULT NULL COMMENT &#39;删除时间&#39;,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &#39;更新时间&#39;,
+  PRIMARY KEY (`id`),
+  KEY `idx_order_no` (`order_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾评价表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_event_tracking` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `model` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;功能 main:主页 choiceCar:选车 pickUpCar:取车 reservation: 预约成功&#39;,
+  `model_event` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;事件 &#39;,
+  `event_type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;事件类型 action view&#39;,
+  `user_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;用户id&#39;,
+  `bike_model` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车型编号&#39;,
+  `duration` int(11) DEFAULT NULL COMMENT &#39;用户停留时间（毫秒）&#39;,
+  `data` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;扩展字段&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;更新时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5680 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;试驾小程序埋点表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_geofence` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `conf_id` int(11) DEFAULT NULL COMMENT &#39;服务区域配置id&#39;,
+  `coordinate` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;区域坐标集合&#39;,
+  `type` tinyint(2) DEFAULT NULL COMMENT &#39;围栏形状（1:圆形 2:多边形 3:矩形）&#39;,
+  `gao_de_coordinate` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;高德坐标集合&#39;,
+  `radius` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;半径(米)&#39;,
+  `center` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;中心点坐标&#39;,
+  `gao_de_center` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;高德中心点坐标&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾服务区域地理围栏表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `order_no` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约订单表编码&#39;,
+  `image_type` int(11) DEFAULT NULL COMMENT &#39;图片类型 0：身份证正面照；1：身份证反面照；2：协议签署照；3：送车车辆正面照；4：送车车辆右面照;5：送车车辆左面照；6：送车车辆后面照；7还车车辆正面照；8：还车车辆右面照；9：还车车辆左面照；10：还车车辆后面照；11：评价照片&#39;,
+  `image_url` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;图片地址&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;更新时间&#39;,
+  `delete_status` int(1) DEFAULT &#39;1&#39; COMMENT &#39;删除状态 0：已删除 1：未删除&#39;,
+  `delete_time` datetime DEFAULT NULL COMMENT &#39;删除时间&#39;,
+  PRIMARY KEY (`id`),
+  KEY `idx_order_id` (`order_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=607 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾订单图片表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `order_no` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;订单编号&#39;,
+  `user_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;C端用户id&#39;,
+  `open_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;C端OpenId&#39;,
+  `store_id` int(11) DEFAULT NULL COMMENT &#39;送车门店id&#39;,
+  `dealer_id` int(11) DEFAULT NULL COMMENT &#39;送车人员id&#39;,
+  `return_bike_dealer_id` int(11) DEFAULT NULL COMMENT &#39;取车店员id&#39;,
+  `trial_user_name` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;试驾用户姓名&#39;,
+  `trial_user_phone` char(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;试驾用户手机号&#39;,
+  `trial_user_card_id` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;试驾用户身份证号&#39;,
+  `bike_model` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;试驾车型 &#39;,
+  `bike_type` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车型&#39;,
+  `subscribe_get_province_id` int(11) DEFAULT NULL COMMENT &#39;预约取车省id&#39;,
+  `subscribe_get_city_id` int(11) DEFAULT NULL COMMENT &#39;预约取车城市id&#39;,
+  `frame_vin_code` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车架号&#39;,
+  `bike_card_id` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车牌&#39;,
+  `battery_code` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;电池SN号&#39;,
+  `subscribe_get_address` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约取车地址&#39;,
+  `subscribe_get_longitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约取车地址经度&#39;,
+  `subscribe_get_latitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约取车地址维度&#39;,
+  `deploy_vehicle_time` datetime DEFAULT NULL COMMENT &#39;配车时间&#39;,
+  `real_get_address` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;送车地址（实际交付地址）&#39;,
+  `real_get_longitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;交付地址经度&#39;,
+  `real_get_latitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;交付地址维度&#39;,
+  `subscribe_get_start_time` datetime DEFAULT NULL COMMENT &#39;预约取车时段开始时间&#39;,
+  `subscribe_get_end_time` datetime DEFAULT NULL COMMENT &#39;预约取车时段结束时间&#39;,
+  `sure_get_start_time` datetime DEFAULT NULL COMMENT &#39;沟通确认的取车时段开始时间&#39;,
+  `sure_get_end_time` datetime DEFAULT NULL COMMENT &#39;沟通确认的取车时段结束时间&#39;,
+  `real_get_time` datetime DEFAULT NULL COMMENT &#39;送车时间（实际取车时间）&#39;,
+  `subscribe_get_remark` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约送车备注&#39;,
+  `deliver_remark` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;交付车辆备注&#39;,
+  `return_province_id` int(11) DEFAULT NULL COMMENT &#39;预约还车省id&#39;,
+  `return_city_id` int(11) DEFAULT NULL COMMENT &#39;预约还车市id&#39;,
+  `subscribe_return_address` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约还车地址&#39;,
+  `subscribe_return_longitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约还车经度&#39;,
+  `subscribe_return_latitude` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约还车维度&#39;,
+  `subscribe_return_start_time` datetime DEFAULT NULL COMMENT &#39;预约还车时段开始时间&#39;,
+  `subscribe_return_end_time` datetime DEFAULT NULL COMMENT &#39;预约还车时段结束时间&#39;,
+  `sure_return_start_time` datetime DEFAULT NULL COMMENT &#39;确认后的还车时段开始时间&#39;,
+  `sure_return_end_time` datetime DEFAULT NULL COMMENT &#39;确认后的还车时段结束时间&#39;,
+  `real_return_time` datetime DEFAULT NULL COMMENT &#39;还车时间（店员取回车时间）&#39;,
+  `subscribe_return_user_name` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约还车联系人姓名&#39;,
+  `subscribe_return_user_phone` char(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约还车联系人手机号&#39;,
+  `subscribe_return_remark` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;还车备注&#39;,
+  `retrieve_remark` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;取回车辆备注&#39;,
+  `return_create_time` datetime DEFAULT NULL COMMENT &#39;还车订单创建时间&#39;,
+  `recommend_user_id` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;推荐人id&#39;,
+  `cancel_code` int(11) DEFAULT NULL COMMENT &#39;取消原因 0：其他原因 1:信息填写错误 2:临时有事，不方便取车 3:配送员联系不上，无法确认取车地点 4:后悔了，不想试驾&#39;,
+  `other_cancel_reason` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT &#39;&#39; COMMENT &#39;其他原因&#39;,
+  `cancel_time` datetime DEFAULT NULL COMMENT &#39;取消时间&#39;,
+  `cancel_type` int(11) DEFAULT NULL COMMENT &#39;取消类型 1:用户取消 2:中台取消&#39;,
+  `status` int(11) DEFAULT &#39;0&#39; COMMENT &#39;订单状态  1:备车中 2:待配送 3:试驾中 4:待还车 5:已完成 6:已填写评价 7：已取消&#39;,
+  `over_time_status` int(1) DEFAULT &#39;0&#39; COMMENT &#39;0 未逾期 1已逾期&#39;,
+  `remark` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;订单备注&#39;,
+  `delete_status` int(1) DEFAULT &#39;1&#39; COMMENT &#39;删除状态 0：已删除 1：未删除&#39;,
+  `delete_time` datetime DEFAULT NULL COMMENT &#39;删除时间&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;更新时间&#39;,
+  `recommend_user_phone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;推荐人手机号&#39;,
+  `area_shopper_id` int(11) DEFAULT NULL COMMENT &#39;导购配置表id&#39;,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_order_no` (`order_no`),
+  KEY `idx_store_id` (`store_id`),
+  KEY `idx_dealer_id` (`dealer_id`),
+  KEY `idx_sub_get_start` (`subscribe_get_start_time`),
+  KEY `idx_sure_get_start` (`sure_get_start_time`),
+  KEY `idx_sub_ret_start` (`subscribe_return_start_time`),
+  KEY `idx_sure_ret_start` (`sure_return_start_time`),
+  KEY `idx_user_id` (`user_id`) USING BTREE,
+  KEY `idx_sub_get_end` (`subscribe_get_end_time`) USING BTREE,
+  KEY `idx_ret_dealer_id` (`return_bike_dealer_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾订单表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_push_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `user_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;C端用户id&#39;,
+  `push_type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;推送类型 1:订阅推送  2：逾期前一天推送3：逾期推送 4:邀请评价推送 5:预约下单推送&#39;,
+  `push_data` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;推送内容&#39;,
+  `push_result` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;推送结果&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=192 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;用户推送表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_service_time` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `conf_id` int(11) DEFAULT NULL COMMENT &#39;服务区域配置id&#39;,
+  `start_time` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;开始时间&#39;,
+  `end_time` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;结束时间&#39;,
+  `appointments` int(3) DEFAULT NULL COMMENT &#39;可预约数&#39;,
+  `status` tinyint(2) DEFAULT &#39;1&#39; COMMENT &#39;状态（0：无效，1：有效）&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `creater` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;创建人&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;修改时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=254 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾服务时段配置表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_shopper` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shopper_name` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;导购名称&#39;,
+  `wechat_qr_code` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;微信二维码图片链接&#39;,
+  `status` tinyint(2) DEFAULT &#39;1&#39; COMMENT &#39;状态（0：无效，1：有效）&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `creater` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;创建人&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;修改时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾导购配置表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_user_subscribe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `user_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;C端用户id&#39;,
+  `open_id` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;C端用户微信openId&#39;,
+  `bike_model` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;订阅车型&#39;,
+  `status` int(11) DEFAULT NULL COMMENT &#39;订阅状态 1.订阅 2.取消订阅 3:下单取消订阅&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;更新时间&#39;,
+  `city_id` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;预约城市&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=374 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;用户车辆订阅表&#39;;
+
+CREATE TABLE `mambike_dealer`.`t_try_drive_vehicle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &#39;主键&#39;,
+  `frame_vin_code` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车架号&#39;,
+  `bike_card_id` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车牌号&#39;,
+  `bike_model` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车型编号&#39;,
+  `bike_type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;车型名称&#39;,
+  `province` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;投放省编码&#39;,
+  `city` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;投放市编码&#39;,
+  `status` tinyint(2) DEFAULT &#39;0&#39; COMMENT &#39;车辆状态（0：空闲，1：试驾中，2：已停用）&#39;,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT &#39;创建时间&#39;,
+  `creater` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT &#39;创建人&#39;,
+  `update_time` datetime DEFAULT NULL COMMENT &#39;修改时间&#39;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT=&#39;预约试驾车辆表&#39;;
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br></div></div></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 992388202@qq.com">wzy</span><!----><!--]--><!--]--></span></div></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/vp2Note/assets/app.f4f3479c.js" defer></script>
+  </body>
+</html>
