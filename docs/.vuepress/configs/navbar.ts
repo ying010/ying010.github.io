@@ -99,4 +99,16 @@ export const navbar: NavbarConfig = [
       },
     ],
   },
+
+  {
+    text: '实操',
+    children: [
+      {
+        text: '错误信息',
+        children: [
+          '/md/using/shell_error.md',
+        ],
+      },
+    ],
+  },
 ]

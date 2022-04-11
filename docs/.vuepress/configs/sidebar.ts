@@ -126,4 +126,18 @@ export const sidebar: SidebarConfig = {
       ],
     },
   ],
+  '/md/using/': [
+    {
+      text: '实操',
+      collapsible: true,
+      children: [
+        {
+          text: '错误信息',
+          children: [
+            '/md/using/shell_error.md',
+          ],
+        },
+      ],
+    },
+  ],
 }
