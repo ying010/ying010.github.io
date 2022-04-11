@@ -66,7 +66,6 @@ export const navbar: NavbarConfig = [
       '/md/study/basic/design-pattern.md',
     ],
   },
-
   {
     text: '工具',
     children: [
@@ -99,14 +98,30 @@ export const navbar: NavbarConfig = [
       },
     ],
   },
-
+  {
+    text: '项目搭建',
+    children: [
+      {
+        text: 'VuePress搭建',
+        children: [
+          '/md/using/vuepress/getting-started.md',
+        ],
+      },
+    ],
+  },
   {
     text: '实操',
     children: [
       {
+        text: '环境配置',
+        children: [
+          '/md/using/environment_configuration.md',
+        ],
+      },
+      {
         text: '错误信息',
         children: [
-          '/md/using/shell_error.md',
+          '/md/using/error/shell_error.md',
         ],
       },
     ],

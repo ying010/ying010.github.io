@@ -132,9 +132,27 @@ export const sidebar: SidebarConfig = {
       collapsible: true,
       children: [
         {
+          text: '环境配置',
+          children: [
+            '/md/using/environment_configuration.md',
+          ],
+        },
+        {
           text: '错误信息',
           children: [
-            '/md/using/shell_error.md',
+            '/md/using/error/shell_error.md',
+          ],
+        },
+      ],
+    },
+    {
+      text: '项目搭建',
+      collapsible: true,
+      children: [
+        {
+          text: 'VuePress搭建',
+          children: [
+            '/md/using/vuepress/getting-started.md',
           ],
         },
       ],
