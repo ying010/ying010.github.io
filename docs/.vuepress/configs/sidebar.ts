@@ -150,7 +150,7 @@ export const sidebar: SidebarConfig = {
       collapsible: true,
       children: [
         {
-          text: 'VuePress搭建',
+          text: 'VuePress',
           children: [
             '/md/using/vuepress/getting-started.md',
           ],

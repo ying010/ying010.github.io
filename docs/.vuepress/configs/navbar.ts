@@ -102,7 +102,7 @@ export const navbar: NavbarConfig = [
     text: '项目搭建',
     children: [
       {
-        text: 'VuePress搭建',
+        text: 'VuePress',
         children: [
           '/md/using/vuepress/getting-started.md',
         ],
