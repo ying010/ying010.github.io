@@ -16,7 +16,7 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 - [Yarn v1](/vp2Note/md/using/environment_configuration.md#安装yarn) （可选）
 
-  ::: tip 扩展
+  ::: extend
 
   标题锚点扩展由 [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor) 支持。
 
@@ -30,7 +30,7 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 - **步骤0**：进入需要生成VuePress文档的路径，新建的空文件夹或已有的项目；
 
-  ::: tip 示例
+  ::: demo
   
   此时的文件夹是空的：
   
@@ -59,7 +59,7 @@ npm install -D vuepress@next
   </CodeGroupItem>
 </CodeGroup>
 
-::: tip 示例
+::: demo
 
 以`yarn`为例：
 
@@ -84,7 +84,7 @@ npm install -D vuepress@next
 }
 ```
 
-::: tip 示例
+::: demo
 
 此时的package.json:
 
@@ -100,7 +100,7 @@ mkdir docs
 echo '# Hello VuePress' > docs/README.md
 ```
 
-::: tip 示例
+::: demo
 
 新建的文件夹和文件：
 
@@ -130,7 +130,7 @@ npm run docs:dev
 
   VuePress 会在 [http://localhost:8080](http://localhost:8080) 启动一个热重载的开发服务器。
 
-::: tip 示例
+::: demo
 
 运行命令：
 
@@ -138,7 +138,7 @@ npm run docs:dev
 
 :::
 
-::: warning 注意
+::: warning
 
 当8080端口被占用时，会依次尝试+1的端口启动，实际的启动端口由回显信息确定：
 
@@ -150,7 +150,7 @@ npm run docs:dev
 
 现在，你应该已经有了一个简单可用的 VuePress 文档网站。接下来，了解一下 VuePress [配置](./configuration.md) 相关的内容。
 
-::: tip 示例
+::: demo
 
 网站：
 
@@ -181,5 +181,17 @@ npm run docs:dev
 - 步骤5：添加git的忽略路径
 
 这三步并不必须，处于简易考虑，选择略去。
+
+:::
+
+::: extend
+
+文档中使用的示例、注意、详情等是vuepress的官方插件，详细介绍参见[container](https://v2.vuepress.vuejs.org/zh/reference/plugin/container.html);
+
+由于`container`是官方插件，可以在默认主题配置中配置容器三个主要提示信息的默认显示信息：
+
+![image-20220411235621715](https://raw.githubusercontent.com/ying010/pic-repo/master/img/2022/04/11/20220411-235623.png)
+
+如果需要自定义容器，可以参见[container设置]()
 
 :::
