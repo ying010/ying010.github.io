@@ -105,6 +105,7 @@ export const navbar: NavbarConfig = [
         text: 'VuePress',
         children: [
           '/md/using/vuepress/getting-started.md',
+          '/md/using/vuepress/plugins.md',
         ],
       },
     ],

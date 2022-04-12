@@ -140,7 +140,7 @@ export const sidebar: SidebarConfig = {
         {
           text: '错误信息',
           children: [
-            '/md/using/error/shell_error.md',
+            '/md/using/error/shell_error',
           ],
         },
       ],
@@ -153,6 +153,7 @@ export const sidebar: SidebarConfig = {
           text: 'VuePress',
           children: [
             '/md/using/vuepress/getting-started.md',
+            '/md/using/vuepress/plugins.md',
           ],
         },
       ],
