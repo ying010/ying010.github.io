@@ -35,8 +35,8 @@ export default defineUserConfig<DefaultThemeOptions>({
             defaultInfo: '示例',
           },
         },
-        before: (info: string): string => `<div class="custom-container tip">${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
-        after: (): string => '</div>\n',
+        before: (info: string): string => `<details class="custom-container details">${info ? `<summary>${info}</summary>` : ''}\n`,
+        after: (): string => '</details>\n',
       },
     ],
     [

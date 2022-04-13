@@ -24,22 +24,25 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
   :::
 
-## 手动初始化项目
+## 快速开始
 
 从头搭建一个简单的 VuePress 文档网站。
 
-- **步骤0**：进入需要生成VuePress文档的路径，新建的空文件夹或已有的项目；
+### **步骤0**：新建文件
 
-  ::: demo
-  
-  此时的文件夹是空的：
-  
-  ![image-20220411212959790](https://raw.githubusercontent.com/ying010/pic-repo/master/img/2022/04/11/20220411-213001.png)
-  
-  :::
+进入需要生成VuePress文档的路径，新建的空文件夹或已有的项目；
 
+::: demo
 
-- **步骤1**: 将 VuePress 安装为本地依赖，这里安装的是最新测试版本`vuepress@next`,如果安装最新的正式版本去除`@next`即可；
+此时的文件夹是空的：
+
+![image-20220411212959790](https://raw.githubusercontent.com/ying010/pic-repo/master/img/2022/04/11/20220411-213001.png)
+
+:::
+
+### **步骤1**：安装VuePress
+
+将 VuePress 安装为本地依赖，这里安装的是最新测试版本`vuepress@next`,如果安装最新的正式版本去除`@next`即可；
 
 <CodeGroup>
   <CodeGroupItem title="YARN" active>
@@ -73,7 +76,9 @@ npm install -D vuepress@next
 
 :::
 
-- **步骤2**: 在 `package.json` 中添加一些 [scripts](https://classic.yarnpkg.com/en/docs/package-json#toc-scripts)，运行/打包指令
+### **步骤2**：增加启动配置
+
+ 在 `package.json` 中添加一些 [scripts](https://classic.yarnpkg.com/en/docs/package-json#toc-scripts)，运行/打包指令
 
 ```json
 {
@@ -92,13 +97,9 @@ npm install -D vuepress@next
 
 :::
 
-- **步骤3**: 新建`docs`文件夹，并在文件夹中新建一个`README.md`文件，在建好的文件中随便输入些内容，编辑`.md`文件可以使用markdown编辑器[Typora(收费)]()或[MarkText(开源)]()；
-  - 如果使用命令行操作，可以使用如下命令完成操作：
+### **步骤3**：添加md文件
 
-```bash
-mkdir docs
-echo '# Hello VuePress' > docs/README.md
-```
+ 新建`docs`文件夹，并在文件夹中新建一个`README.md`文件，在建好的文件中随便输入些内容。编辑`.md`文件可以使用markdown编辑器[Typora(收费)]()或[MarkText(开源)]()；
 
 ::: demo
 
@@ -108,7 +109,9 @@ echo '# Hello VuePress' > docs/README.md
 
 :::
 
-- **步骤4**: 在本地启动服务器来开发你的文档网站
+### **步骤4**：启动
+
+ 在本地启动服务器来开发你的文档网站
 
 <CodeGroup>
   <CodeGroupItem title="YARN" active>
@@ -148,7 +151,7 @@ npm run docs:dev
 
 当你修改你的 Markdown 文件时，浏览器中的内容也会自动更新。
 
-现在，你应该已经有了一个简单可用的 VuePress 文档网站。接下来，了解一下 VuePress [配置](./configuration.md) 相关的内容。
+现在，你应该已经有了一个简单可用的 VuePress 文档网站。
 
 ::: demo
 
@@ -158,9 +161,7 @@ npm run docs:dev
 
 :::
 
-> 引用自[VuePress 官方文档](https://v2.vuepress.vuejs.org/zh/guide/getting-started.html)
-
-::: details
+::: demo 官网的异同
 
 官方文档中的
 
@@ -195,3 +196,64 @@ npm run docs:dev
 如果需要自定义容器，可以参见[container设置]()
 
 :::
+
+## 配置文件
+
+如果没有任何配置， VuePress 站点仅有一些最基础的功能。为了更好地自定义网站，首先在文档目录下创建一个 `.vuepress` 目录，所有 VuePress 相关的文件都将会被放在这里。项目结构如下：
+
+```
+   ├── docs
+   |  ├── .vuepress
+   |  |  └── config.ts
+   |  └── README.md
+   ├── package.json
+   ├── tree.txt
+   └── yarn.lock
+```
+
+VuePress 站点必要的配置文件是 `.vuepress/config.js`，它应该导出一个 JavaScript 对象。如果使用 TypeScript ，可以将其替换为 `.vuepress/config.ts` ，以便让 VuePress 配置得到更好的类型提示。
+
+:::: code-group
+
+::: code-group-item ts
+
+```ts
+import { defineUserConfig } from 'vuepress'
+import type { DefaultThemeOptions } from 'vuepress'
+
+export default defineUserConfig<DefaultThemeOptions>({
+  // 站点配置
+  lang: 'zh-CN',
+  title: 'Hello VuePress',
+  description: 'Just playing around',
+
+  // 主题和它的配置
+  theme: '@vuepress/theme-default',
+  themeConfig: {
+    logo: 'https://vuejs.org/images/logo.png',
+  },
+})
+```
+
+:::
+
+::: code-group-item js
+
+```js
+module.exports = {
+  // 站点配置
+  lang: 'zh-CN',
+  title: '你好， VuePress ！',
+  description: '这是我的第一个 VuePress 站点',
+
+  // 主题和它的配置
+  theme: '@vuepress/theme-default',
+  themeConfig: {
+    logo: 'https://vuejs.org/images/logo.png',
+  },
+}
+```
+
+:::
+
+::::

@@ -153,6 +153,7 @@ export const sidebar: SidebarConfig = {
           text: 'VuePress',
           children: [
             '/md/using/vuepress/getting-started.md',
+            '/md/using/vuepress/default-theme.md',
             '/md/using/vuepress/plugins.md',
           ],
         },
