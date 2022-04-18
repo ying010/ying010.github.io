@@ -146,7 +146,7 @@ export const sidebar: SidebarConfig = {
       ],
     },
     {
-      text: '项目搭建',
+      text: '辅助项目搭建',
       collapsible: true,
       children: [
         {
@@ -160,4 +160,18 @@ export const sidebar: SidebarConfig = {
       ],
     },
   ],
+  '/md/using/project-build': [
+    {
+      text: '开发项目搭建',
+      collapsible: true,
+      children: [
+        {
+          text: '项目框架',
+          children: [
+            '/md/using/project-build/project-framework.md',
+          ],
+        },
+      ],
+    },
+  ]
 }

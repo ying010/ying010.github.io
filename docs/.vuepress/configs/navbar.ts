@@ -99,7 +99,7 @@ export const navbar: NavbarConfig = [
     ],
   },
   {
-    text: '项目搭建',
+    text: '辅助项目搭建',
     children: [
       {
         text: 'VuePress',
@@ -107,6 +107,17 @@ export const navbar: NavbarConfig = [
           '/md/using/vuepress/getting-started.md',
           '/md/using/vuepress/default-theme.md',
           '/md/using/vuepress/plugins.md',
+        ],
+      },
+    ],
+  },
+  {
+    text: '开发项目搭建',
+    children: [
+      {
+        text: '项目框架',
+        children: [
+          '/md/using/project-build/project-framework.md',
         ],
       },
     ],
