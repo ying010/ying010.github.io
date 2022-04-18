@@ -1,12 +1,14 @@
+# Redis命令
+
 [TOC]
 
-# 规定
+## 语法
 
 - ***大写字母*** 表示命令名 
 - ***\<options>*** 表示必传参数
 - ***[options]*** 表示可选参数
 
-# 一、通用命令
+## 通用命令
 
 - `DEL <key>` 用于删除key
 - `DUMP <key>` 序列化key，并返回被序列化的值
@@ -18,7 +20,7 @@
 - `RENAMENX <key> <newkey>` 当newkey不存在时，将key重命名
 - `TYPE <key>` 返回key所存储的值的类型
 
-## 1.2 键过期命令
+## 键过期命令
 
 - `PERSIST <key>` 移除键的过期时间
 - `TTL <key>` 查看键过期时间(单位：秒)
