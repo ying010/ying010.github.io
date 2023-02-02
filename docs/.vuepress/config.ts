@@ -1,8 +1,11 @@
 import {defineUserConfig} from 'vuepress'
-import {DefaultThemeOptions} from 'vuepress'
+import {defaultTheme} from 'vuepress'
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
+import { containerPlugin } from '@vuepress/plugin-container'
+
 import {sidebar, navbar} from './configs'
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   base: '/vp2Note/',
   locales: {
     '/': {
@@ -11,10 +14,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       description: 'Just playing around',
     },
   },
+
   head: [['link', {rel: 'ico', href: 'https://vuejs.org/images/logo.png'}]],
 
-  theme: '@vuepress/theme-default',
-  themeConfig: {
+  theme: defaultTheme({
     logo: 'https://vuejs.org/images/logo.png',
     // navbar: navbar.zh,
     sidebar,
@@ -23,34 +26,32 @@ export default defineUserConfig<DefaultThemeOptions>({
     tip: '提示',
     warning: '注意',
     danger: '警告',
-  },
+  }),
 
   plugins: [
-    [
-      '@vuepress/container',
-      {
-        type: 'demo',
-        locales: {
-          '/': {
-            defaultInfo: '示例',
-          },
+    containerPlugin({
+      type: 'demo',
+      locales: {
+        '/': {
+          defaultInfo: '示例',
         },
-        before: (info: string): string => `<details class="custom-container details">${info ? `<summary>${info}</summary>` : ''}\n`,
-        after: (): string => '</details>\n',
       },
-    ],
-    [
-      '@vuepress/container',
-      {
-        type: 'extend',
-        locales: {
-          '/': {
-            defaultInfo: '拓展',
-          },
+      before: (info: string): string => `<details class="custom-container details">${info ? `<summary>${info}</summary>` : ''}\n`,
+      after: (): string => '</details>\n',
+    }),
+    containerPlugin({
+      type: 'extend',
+      locales: {
+        '/': {
+          defaultInfo: '拓展',
         },
-        before: (info: string): string => `<div class="custom-container tip">${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
-        after: (): string => '</div>\n',
       },
-    ],
+      before: (info: string): string => `<div class="custom-container tip">${info ? `<p class="custom-container-title">${info}</p>` : ''}\n`,
+      after: (): string => '</div>\n',
+    }),
+    mdEnhancePlugin({
+      // 启用任务列表
+      tasklist: true,
+    }),
   ],
 })
