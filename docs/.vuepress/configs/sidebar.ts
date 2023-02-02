@@ -50,6 +50,13 @@ export const sidebar: SidebarConfig = {
         },
       ],
     },
+    {
+      text: '漏洞',
+      collapsible: true,
+      children: [
+        'md/study/java/vulnerability/Dos.md',
+      ],
+    },
   ],
   '/md/study/front': [
     {
@@ -169,6 +176,20 @@ export const sidebar: SidebarConfig = {
           text: '项目框架',
           children: [
             '/md/using/project-build/project-framework.md',
+          ],
+        },
+      ],
+    },
+  ],
+  '/md/annual-planning': [
+    {
+      text: '年度计划',
+      collapsible: true,
+      children: [
+        {
+          text: '2023',
+          children: [
+            '/md/annual-planning/2023.md',
           ],
         },
       ],

@@ -17,3 +17,6 @@ Windows系统执行脚本时有时回报，`无法加载文件 XXX，因为在�
 ![image-20220411162903866](https://raw.githubusercontent.com/ying010/pic-repo/master/img/2022/04/11/20220411-162905.png)
 
 > 官方文档：[about_Execution_Policies](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
+
+
+
