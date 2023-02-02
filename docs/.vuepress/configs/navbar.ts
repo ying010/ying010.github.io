@@ -6,6 +6,10 @@ export const navbar: NavbarConfig = [
     link: '/md/study/README.md',
   },
   {
+    text: '年度规划',
+    link: '/md/annual-planning/2023.md',
+  },
+  {
     text: 'JAVA',
     children: [
       {
@@ -28,6 +32,12 @@ export const navbar: NavbarConfig = [
         text: '中间件',
         children: [
           '/md/study/java/middleware/message/Kafka.md',
+        ],
+      },
+      {
+        text: '漏洞',
+        children: [
+          '/md/study/java/vulnerability/Dos.md',
         ],
       },
     ],
