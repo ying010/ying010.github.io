@@ -2114,6 +2114,11 @@ markdown-it-emoji@^2.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-2.0.2.tgz#cd42421c2fda1537d9cc12b9923f5c8aeb9029c8"
   integrity sha512-zLftSaNrKuYl0kR5zm4gxXjHaOI3FAOEaloKmRA5hijmJZvSjmxcokOLlzycb/HXlUFWzXqpIEoyEMCE4i9MvQ==
 
+markdown-it-task-list@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/markdown-it-task-list/-/markdown-it-task-list-0.1.2.tgz#226cc00bfed82cc635c8feecd39eecba6accafcc"
+  integrity sha512-PEMPS3dXvtzePTgxxUb9G10OL3saqam/NDqo5pp3kaYG5q1L5yJCJtjxbfpLDFPTpuonscYbkdGIs+QqMfqqzA==
+
 markdown-it-task-lists@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/markdown-it-task-lists/-/markdown-it-task-lists-2.1.1.tgz#f68f4d2ac2bad5a2c373ba93081a1a6848417088"

@@ -194,5 +194,20 @@ export const sidebar: SidebarConfig = {
         },
       ],
     },
-  ]
+  ],
+  '/md/using/debug/': [
+    {
+      text: '优化/调试工具',
+      collapsible: true,
+      children: [
+        {
+          text: 'arthas',
+          children: [
+            '/md/using/debug/arthas/入门.md',
+            '/md/using/debug/arthas/简介.md',
+          ],
+        },
+      ],
+    },
+  ],
 }
