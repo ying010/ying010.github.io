@@ -158,6 +158,7 @@ export const navbar: NavbarConfig = [
                     '/md/using/debug/arthas/简介.md',
                     '/md/using/debug/arthas/入门.md',
                     '/md/using/debug/arthas/最佳实践.md',
+                    '/md/using/debug/arthas/原理解析.md',
                 ],
             }
         ],
