@@ -15,6 +15,9 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "markdown-it-task-list": "^0.1.2"
+    "@vuepress/plugin-docsearch": "^2.0.0-alpha.1",
+    "@vuepress/plugin-search": "^1.9.8",
+    "markdown-it-task-list": "^0.1.2",
+    "vuepress-plugin-copy-code2": "^2.0.0-beta.174"
   }
 }
