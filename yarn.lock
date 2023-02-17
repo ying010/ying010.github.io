@@ -2848,10 +2848,10 @@ uuid@^9.0.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
   integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
-viewer@^0.10.11:
-  version "0.10.11"
-  resolved "https://registry.yarnpkg.com/viewer/-/viewer-0.10.11.tgz#df2476d27c5fc5914a1953901bb3f545d951cb1b"
-  integrity sha512-9LktU/+YqC/vlWZPklZIZnCLv7WZGEMczU0Gw2JnWO4j0iMmp3qQG34upYoSziTQ3gnfO6IqKAsVi3mA7zy12Q==
+viewerjs@^1.11.2:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/viewerjs/-/viewerjs-1.11.2.tgz#18eb326188225461f85d1e6430f43ba90623b907"
+  integrity sha512-z7N9R91ORhtLvOUxN7GoIl+MFVVMbtWNB1T2UmTKuMlzc4EevS+/bletZcIwDf8RIUzk2CFMdleQzcsjsfLl+A==
 
 vite@~4.0.3:
   version "4.0.4"

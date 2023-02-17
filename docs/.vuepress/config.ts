@@ -4,6 +4,7 @@ import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance'
 import {containerPlugin} from '@vuepress/plugin-container'
 import {copyCodePlugin} from 'vuepress-plugin-copy-code2'
 import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links'
+import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 
 import {sidebar, navbar} from './configs'
 
@@ -21,19 +22,6 @@ export default defineUserConfig({
 
     head: [
         ['link', {rel: 'ico', href: 'https://vuejs.org/images/logo.png'}],
-        [
-            'link',
-            {
-                rel: 'stylesheet',
-                href: 'https://cdn.bootcdn.net/ajax/libs/viewerjs/1.10.5/viewer.min.css',
-            },
-        ],
-        [
-            'script',
-            {
-                src: 'https://cdn.bootcdn.net/ajax/libs/viewerjs/1.10.5/viewer.min.js',
-            },
-        ],
     ],
 
     theme: defaultTheme({
@@ -108,5 +96,6 @@ export default defineUserConfig({
             // 启用任务列表
             tasklist: true,
         }),
+        mediumZoomPlugin({selector: 'a > img'}),
     ],
 })
