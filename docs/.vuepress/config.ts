@@ -4,6 +4,7 @@ import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance'
 import {containerPlugin} from '@vuepress/plugin-container'
 import {copyCodePlugin} from 'vuepress-plugin-copy-code2'
 import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links'
+import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 
 import {sidebar, navbar} from './configs'
 
@@ -55,6 +56,7 @@ export default defineUserConfig({
 
     plugins: [
         containerPlugin({
+            // 自定义容器插件
             type: 'demo',
             locales: {
                 '/': {
@@ -65,6 +67,7 @@ export default defineUserConfig({
             after: (): string => '</details>\n',
         }),
         containerPlugin({
+            // 自定义容器插件
             type: 'extend',
             locales: {
                 '/': {
@@ -75,6 +78,7 @@ export default defineUserConfig({
             after: (): string => '</div>\n',
         }),
         copyCodePlugin({
+            // 代码可复制插件
             showInMobile: false,
             locales: {
                 "/": {
@@ -83,7 +87,11 @@ export default defineUserConfig({
             },
         }),
         activeHeaderLinksPlugin({
+            // 跳转链接加图标插件
             headerLinkSelector: "div.right-menu-item > a",
+        }),
+        mediumZoomPlugin({
+            // 图片可缩放插件
         }),
         mdEnhancePlugin({
             // 启用任务列表
