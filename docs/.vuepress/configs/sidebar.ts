@@ -51,6 +51,13 @@ export const sidebar: SidebarConfig = {
       ],
     },
     {
+      text: '插件',
+      collapsible: true,
+      children: [
+        '/md/study/java/plugin/i18n.md',
+      ],
+    },
+    {
       text: '漏洞',
       collapsible: true,
       children: [

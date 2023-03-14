@@ -35,6 +35,12 @@ export const navbar: NavbarConfig = [
                 ],
             },
             {
+                text: '插件',
+                children: [
+                    '/md/study/java/plugin/i18n.md',
+                ],
+            },
+            {
                 text: '漏洞',
                 children: [
                     '/md/study/java/vulnerability/Dos.md',
