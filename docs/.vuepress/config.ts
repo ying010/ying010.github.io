@@ -18,7 +18,7 @@ export default defineUserConfig({
         },
     },
 
-    markdown: {headers: {level: [2,3,4,5,6]}},
+    markdown: {headers: {level: [1,2,3,4,5,6]}},
 
     head: [
         ['link', {rel: 'ico', href: 'https://vuejs.org/images/logo.png'}],

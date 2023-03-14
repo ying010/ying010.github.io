@@ -1,3 +1,5 @@
+# Linux命令
+
 - ` stat ${fileName}` 查看文件新建信息
 - `-daemon`启动守护进程
 

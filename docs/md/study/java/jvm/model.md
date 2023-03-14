@@ -1,8 +1,8 @@
-# 模型图
+# 内存模型
+
+## 模型图
 
 ![JVM内存模型](https://raw.githubusercontent.com/ying010/pic-repo/master/img/20220408105205.png)
-
-# 一、JVM内存结构
 
 ## 1.1 程序计数器
 

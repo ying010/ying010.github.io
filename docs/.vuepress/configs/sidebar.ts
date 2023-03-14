@@ -11,10 +11,9 @@ export const sidebar: SidebarConfig = {
   ],
   '/md/study/java': [
     {
-      text: 'jvm',
+      text: 'JVM',
       collapsible: true,
       children: [
-        '/md/study/java/jvm/command.md',
         '/md/study/java/jvm/model.md',
         '/md/study/java/jvm/oom.md',
       ],
@@ -33,7 +32,7 @@ export const sidebar: SidebarConfig = {
         {
           text: 'Spring',
           children: [
-            '/md/study/java/framework/Spring/spring-framework-source.md',
+            '/md/study/java/framework/spring/spring-framework-source.md',
           ],
         },
       ],
@@ -45,7 +44,7 @@ export const sidebar: SidebarConfig = {
         {
           text: '消息中间件',
           children: [
-            '/md/study/java/middleware/message/Kafka.md',
+            '/md/study/java/middleware/kafka.md',
           ],
         },
       ],
@@ -61,7 +60,7 @@ export const sidebar: SidebarConfig = {
       text: '漏洞',
       collapsible: true,
       children: [
-        'md/study/java/vulnerability/Dos.md',
+        '/md/study/java/vulnerability/dos.md',
       ],
     },
   ],

@@ -2,36 +2,43 @@ import type {NavbarConfig} from '@vuepress/theme-default'
 
 export const navbar: NavbarConfig = [
     {
-        text: '首页',
-        link: '/md/study/README.md',
+        text: '总览',
+        children: [
+            {
+                text: '学习路线',
+                children: [
+                    '/md/study/README.md',
+                ],
+            },
+            {
+                text: '学习规划',
+                children: [
+                    '/md/annual-planning/2023.md',
+                ],
+            },
+        ],
     },
     {
-        text: '年度规划',
-        link: '/md/annual-planning/2023.md',
+        text: '基础知识',
+        children: [
+            '/md/study/basic/algorithm.md',
+            '/md/study/basic/design-pattern.md',
+        ],
     },
     {
         text: 'JAVA',
         children: [
             {
-                text: 'jvm',
+                text: 'JVM',
                 children: [
-                    '/md/study/java/jvm/command.md',
                     '/md/study/java/jvm/model.md',
                     '/md/study/java/jvm/oom.md',
                 ],
             },
             {
-                text: '框架',
-                children: [
-                    '/md/study/java/framework/mybatis/interceptor.md',
-                    '/md/study/java/framework/mybatis/page-helper.md',
-                    '/md/study/java/framework/Spring/spring-framework-source.md',
-                ],
-            },
-            {
                 text: '中间件',
                 children: [
-                    '/md/study/java/middleware/message/Kafka.md',
+                    '/md/study/java/middleware/kafka.md',
                 ],
             },
             {
@@ -43,7 +50,25 @@ export const navbar: NavbarConfig = [
             {
                 text: '漏洞',
                 children: [
-                    '/md/study/java/vulnerability/Dos.md',
+                    '/md/study/java/vulnerability/dos.md',
+                ],
+            },
+        ],
+    },
+    {
+        text: '框架',
+        children: [
+            {
+                text: 'Spring',
+                children: [
+                    '/md/study/java/framework/Spring/spring-framework-source.md',
+                ],
+            },
+            {
+                text: 'Mybatis',
+                children: [
+                    '/md/study/java/framework/mybatis/interceptor.md',
+                    '/md/study/java/framework/mybatis/page-helper.md',
                 ],
             },
         ],
@@ -76,13 +101,6 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: '基础知识',
-        children: [
-            '/md/study/basic/algorithm.md',
-            '/md/study/basic/design-pattern.md',
-        ],
-    },
-    {
         text: '工具',
         children: [
             {
@@ -110,6 +128,7 @@ export const navbar: NavbarConfig = [
                 children: [
                     '/md/tools/redis/command.md',
                     '/md/tools/redis/initialization.md',
+                    '/md/tools/redis/using.md',
                 ],
             },
         ],
