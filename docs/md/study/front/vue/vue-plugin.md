@@ -1,6 +1,8 @@
-# 一、 Vue CLI
+# VUE插件
 
-## 1.1. 什么是CLI
+## 一、 Vue CLI
+
+### 1.1 什么是CLI
 
 * 脚手架是什么东西
 * CLI依赖 webpack、node、npm
@@ -8,11 +10,11 @@
 
 
 
-## 1.2. CLI2初始化项目的过程
+#### 1.2 CLI2初始化项目的过程
 
 
 
-## 1.3. CLI2项目目录
+#### 1.3 CLI2项目目录
 
 
 
@@ -22,7 +24,7 @@
 * runtime-only: render:(h) => h, -> createElement
 * runtime-only: 效率更高、文件更小
 
-### 1.5. Vue CLI3
+### 1.5 Vue CLI3
 
 * 如何通过CLI3创建项目
 
@@ -125,7 +127,7 @@
 
 
 
-## 六、 网络请求封装(axios)
+## 六、axios
 
 ### 6.1. 网络请求方式的选择
 

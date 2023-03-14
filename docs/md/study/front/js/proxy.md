@@ -24,25 +24,26 @@ obj.name
 
 ## 语法：
 
-​	new Proxy(target, handler);
+​	`new Proxy(target, handler);`
 
-​	new Proxy(被代理的对象, 对代理的对象做什么操作)
+​	`new Proxy(被代理的对象, 对代理的对象做什么操作)`
 
+```
 handler:JSON
 
 {
+	set(){}, //设置的时候调用
 
-​	set(){}, //设置的时候调用
+	get(){},//获取的时候调用
 
-​	get(){},//获取的时候调用
+	deleteProperty(){},//删除
 
-​	deleteProperty(){},//删除
+	has(){},//判断有没有 'xxx' in obj
 
-​	has(){},//判断有没有 'xxx' in obj
-
-​	apply(),//调用函数处理
+	apply(),//调用函数处理
 
 }
+```
 
 
 
