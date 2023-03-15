@@ -73,33 +73,33 @@ export const navbar: NavbarConfig = [
             },
         ],
     },
-    {
-        text: '前端',
-        children: [
-            {
-                text: 'css',
-                children: [
-                    '/md/study/front/css/css.md',
-                ],
-            },
-            {
-                text: 'js',
-                children: [
-                    '/md/study/front/js/proxy.md',
-                    '/md/study/front/js/function.md',
-                ],
-            },
-            {
-                text: 'vue',
-                children: [
-                    '/md/study/front/vue/',
-                    '/md/study/front/vue/vue-basis',
-                    '/md/study/front/vue/vue-error-analysis',
-                    '/md/study/front/vue/vue-project',
-                ],
-            },
-        ],
-    },
+    // {
+    //     text: '前端',
+    //     children: [
+    //         {
+    //             text: 'css',
+    //             children: [
+    //                 '/md/study/front/css/css.md',
+    //             ],
+    //         },
+    //         {
+    //             text: 'js',
+    //             children: [
+    //                 '/md/study/front/js/proxy.md',
+    //                 '/md/study/front/js/function.md',
+    //             ],
+    //         },
+    //         {
+    //             text: 'vue',
+    //             children: [
+    //                 '/md/study/front/vue/',
+    //                 '/md/study/front/vue/vue-basis',
+    //                 '/md/study/front/vue/vue-error-analysis',
+    //                 '/md/study/front/vue/vue-project',
+    //             ],
+    //         },
+    //     ],
+    // },
     {
         text: '工具',
         children: [
