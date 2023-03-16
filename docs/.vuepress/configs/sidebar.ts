@@ -1,100 +1,87 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
 
 export const sidebar: SidebarConfig = {
-  '/md/study/': [
+  '/md/base/': [
     {
-      text: '概述',
-      children: [
-        '/md/study/README.md'
-      ]
-    }
-  ],
-  '/md/study/java': [
-    {
-      text: 'JVM',
+      text: '学习路线',
       collapsible: true,
       children: [
-        '/md/study/java/jvm/model.md',
-        '/md/study/java/jvm/oom.md',
+        '/md/base/study-line/README.md',
       ],
     },
     {
-      text: '框架',
+      text: '学习规划',
+      collapsible: true,
+      children: [
+        '/md/base/annual-planning/2023.md',
+      ],
+    },
+  ],
+  '/md/java/': [
+    {
+      text: 'Spring',
       collapsible: true,
       children: [
         {
-          text: 'Mybatis',
+          text: 'spring-framework',
           children: [
-            '/md/study/java/framework/mybatis/interceptor.md',
-            '/md/study/java/framework/mybatis/page-helper.md',
+            '/md/java/spring/spring-framework/spring-framework-source.md',
           ],
         },
-        {
-          text: 'Spring',
-          children: [
-            '/md/study/java/framework/spring/spring-framework-source.md',
-          ],
-        },
-      ],
+      ]
     },
     {
       text: '中间件',
       collapsible: true,
       children: [
         {
-          text: '消息中间件',
+          text: 'redis',
           children: [
-            '/md/study/java/middleware/kafka.md',
+            '/md/java/middleware/redis/command.md',
+            '/md/java/middleware/redis/initialization.md',
+            '/md/java/middleware/redis/using.md',
           ],
         },
+        {
+          text: 'Mybatis',
+          children: [
+            '/md/java/middleware/mybatis/mybatis.md',
+          ],
+        },
+        {
+          text: 'Kafka',
+          children: [
+            '/md/java/middleware/kafka/kafka.md',
+          ],
+        },
+      ],
+    },
+    {
+      text: 'JVM',
+      collapsible: true,
+      children: [
+        '/md/java/base/jvm/model.md',
+        '/md/java/base/jvm/oom.md',
       ],
     },
     {
       text: '插件',
       collapsible: true,
       children: [
-        '/md/study/java/plugin/i18n.md',
+        '/md/java/base/plugin/i18n.md',
       ],
     },
     {
       text: '漏洞',
       collapsible: true,
       children: [
-        '/md/study/java/vulnerability/dos.md',
+        '/md/java/base/vulnerability/dos.md',
       ],
     },
   ],
-  '/md/study/front': [
-    {
-      text: 'css',
-      collapsible: true,
-      children: [
-        '/md/study/front/css/css.md',
-      ],
-    },
-    {
-      text: 'js',
-      collapsible: true,
-      children: [
-        '/md/study/front/js/proxy.md',
-        '/md/study/front/js/function.md',
-      ],
-    },
-    {
-      text: 'vue',
-      collapsible: true,
-      children: [
-        '/md/study/front/vue/',
-        '/md/study/front/vue/vue-basis',
-        '/md/study/front/vue/vue-error-analysis',
-        '/md/study/front/vue/vue-project',
-      ],
-    },
-  ],
-  '/md/study/basic': [
+  '/md/study/basic/': [
     {
       text: '基础知识',
-      collapsible: true,
       children: [
         '/md/study/basic/algorithm.md',
         '/md/study/basic/design-pattern.md',
@@ -104,117 +91,59 @@ export const sidebar: SidebarConfig = {
   '/md/tools/': [
     {
       text: '开发工具',
-      collapsible: true,
       children: [
-        {
-          text: 'idea',
-          children: [
-            '/md/tools/IDE/IDEA/getting-started.md',
-            '/md/tools/IDE/IDEA/keymap.md',
-            '/md/tools/IDE/IDEA/plugins.md',
-          ],
-        },
+        '/md/tools/IDE/IDEA/getting-started.md',
+        '/md/tools/IDE/IDEA/keymap.md',
+        '/md/tools/IDE/IDEA/plugins.md',
       ],
     },
     {
       text: 'Linux',
-      collapsible: true,
       children: [
         '/md/tools/Linux/command.md',
       ],
     },
     {
       text: 'npm',
-      collapsible: true,
       children: [
         '/md/tools/npm/npm.md',
       ],
     },
-    {
-      text: 'redis',
-      collapsible: true,
-      children: [
-        '/md/tools/redis/command.md',
-        '/md/tools/redis/initialization.md',
-      ],
-    },
   ],
   '/md/using/': [
+      {
+        text: 'VuePress',
+        children: [
+          '/md/using/vuepress/getting-started.md',
+          '/md/using/vuepress/default-theme.md',
+          '/md/using/vuepress/plugins.md',
+        ],
+      },
     {
-      text: '实操',
-      collapsible: true,
+      text: '开发项目',
       children: [
-        {
-          text: '环境配置',
-          children: [
-            '/md/using/environment_configuration.md',
-          ],
-        },
-        {
-          text: '错误信息',
-          children: [
-            '/md/using/error/shell_error',
-          ],
-        },
+        '/md/using/project-build/project-framework.md',
       ],
     },
     {
-      text: '辅助项目搭建',
-      collapsible: true,
+      text: '环境配置',
       children: [
-        {
-          text: 'VuePress',
-          children: [
-            '/md/using/vuepress/getting-started.md',
-            '/md/using/vuepress/default-theme.md',
-            '/md/using/vuepress/plugins.md',
-          ],
-        },
+        '/md/using/environment_configuration.md',
       ],
     },
-  ],
-  '/md/using/project-build': [
     {
-      text: '开发项目搭建',
-      collapsible: true,
+      text: '错误信息',
       children: [
-        {
-          text: '项目框架',
-          children: [
-            '/md/using/project-build/project-framework.md',
-          ],
-        },
+        '/md/using/error/shell_error.md',
       ],
     },
-  ],
-  '/md/annual-planning': [
     {
-      text: '年度计划',
-      collapsible: true,
+      text: 'arthas',
       children: [
-        {
-          text: '2023',
-          children: [
-            '/md/annual-planning/2023.md',
-          ],
-        },
-      ],
-    },
-  ],
-  '/md/using/debug/': [
-    {
-      text: '优化/调试工具',
-      collapsible: true,
-      children: [
-        {
-          text: 'arthas',
-          children: [
-            '/md/using/debug/arthas/简介.md',
-            '/md/using/debug/arthas/入门.md',
-            '/md/using/debug/arthas/最佳实践.md',
-            '/md/using/debug/arthas/原理解析.md',
-          ],
-        },
+        '/md/using/debug/arthas/简介.md',
+        '/md/using/debug/arthas/入门.md',
+        '/md/using/debug/arthas/最佳实践.md',
+        '/md/using/debug/arthas/原理解析.md',
       ],
     },
   ],

@@ -7,22 +7,15 @@ export const navbar: NavbarConfig = [
             {
                 text: '学习路线',
                 children: [
-                    '/md/study/README.md',
+                    '/md/base/study-line/README.md',
                 ],
             },
             {
                 text: '学习规划',
                 children: [
-                    '/md/annual-planning/2023.md',
+                    '/md/base/annual-planning/2023.md',
                 ],
             },
-        ],
-    },
-    {
-        text: '基础知识',
-        children: [
-            '/md/study/basic/algorithm.md',
-            '/md/study/basic/design-pattern.md',
         ],
     },
     {
@@ -31,75 +24,72 @@ export const navbar: NavbarConfig = [
             {
                 text: 'JVM',
                 children: [
-                    '/md/study/java/jvm/model.md',
-                    '/md/study/java/jvm/oom.md',
-                ],
-            },
-            {
-                text: '中间件',
-                children: [
-                    '/md/study/java/middleware/kafka.md',
+                    '/md/java/base/jvm/model.md',
+                    '/md/java/base/jvm/oom.md',
                 ],
             },
             {
                 text: '插件',
                 children: [
-                    '/md/study/java/plugin/i18n.md',
+                    '/md/java/base/plugin/i18n.md',
                 ],
             },
             {
                 text: '漏洞',
                 children: [
-                    '/md/study/java/vulnerability/dos.md',
+                    '/md/java/base/vulnerability/dos.md',
                 ],
             },
         ],
     },
     {
-        text: '框架',
+        text: 'Spring',
         children: [
             {
-                text: 'Spring',
+                text: 'spring-framework',
                 children: [
-                    '/md/study/java/framework/Spring/spring-framework-source.md',
+                    '/md/java/spring/spring-framework/spring-framework-source.md',
+                ],
+            },
+        ],
+    },
+    {
+        text: '中间件',
+        children: [
+            {
+                text: 'redis',
+                children: [
+                    '/md/java/middleware/redis/command.md',
+                    '/md/java/middleware/redis/initialization.md',
+                    '/md/java/middleware/redis/using.md',
                 ],
             },
             {
                 text: 'Mybatis',
                 children: [
-                    '/md/study/java/framework/mybatis/interceptor.md',
-                    '/md/study/java/framework/mybatis/page-helper.md',
+                    '/md/java/middleware/mybatis/mybatis.md',
+                ],
+            },
+            {
+                text: 'Kafka',
+                children: [
+                    '/md/java/middleware/kafka/kafka.md',
                 ],
             },
         ],
     },
-    // {
-    //     text: '前端',
-    //     children: [
-    //         {
-    //             text: 'css',
-    //             children: [
-    //                 '/md/study/front/css/css.md',
-    //             ],
-    //         },
-    //         {
-    //             text: 'js',
-    //             children: [
-    //                 '/md/study/front/js/proxy.md',
-    //                 '/md/study/front/js/function.md',
-    //             ],
-    //         },
-    //         {
-    //             text: 'vue',
-    //             children: [
-    //                 '/md/study/front/vue/',
-    //                 '/md/study/front/vue/vue-basis',
-    //                 '/md/study/front/vue/vue-error-analysis',
-    //                 '/md/study/front/vue/vue-project',
-    //             ],
-    //         },
-    //     ],
-    // },
+    {
+        text: '其他',
+        children:[
+            {
+                text: '基础知识',
+                children: [
+                    '/md/study/basic/algorithm.md',
+                    '/md/study/basic/design-pattern.md',
+                ],
+            },
+        ]
+    },
     {
         text: '工具',
         children: [
@@ -123,18 +113,10 @@ export const navbar: NavbarConfig = [
                     '/md/tools/npm/npm.md',
                 ],
             },
-            {
-                text: 'redis',
-                children: [
-                    '/md/tools/redis/command.md',
-                    '/md/tools/redis/initialization.md',
-                    '/md/tools/redis/using.md',
-                ],
-            },
         ],
     },
     {
-        text: '辅助项目搭建',
+        text: '项目搭建',
         children: [
             {
                 text: 'VuePress',
@@ -144,13 +126,8 @@ export const navbar: NavbarConfig = [
                     '/md/using/vuepress/plugins.md',
                 ],
             },
-        ],
-    },
-    {
-        text: '开发项目搭建',
-        children: [
             {
-                text: '项目框架',
+                text: '开发项目',
                 children: [
                     '/md/using/project-build/project-framework.md',
                 ],
@@ -158,7 +135,7 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: '实操',
+        text: '开发实践',
         children: [
             {
                 text: '环境配置',
@@ -172,11 +149,6 @@ export const navbar: NavbarConfig = [
                     '/md/using/error/shell_error.md',
                 ],
             },
-        ],
-    },
-    {
-        text: '调试工具',
-        children: [
             {
                 text: 'arthas',
                 children: [
@@ -185,7 +157,7 @@ export const navbar: NavbarConfig = [
                     '/md/using/debug/arthas/最佳实践.md',
                     '/md/using/debug/arthas/原理解析.md',
                 ],
-            }
+            },
         ],
     },
 ]
