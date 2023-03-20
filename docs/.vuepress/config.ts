@@ -95,6 +95,7 @@ export default defineUserConfig({
         mdEnhancePlugin({
             // 启用任务列表
             tasklist: true,
+            mermaid: true,
         }),
         mediumZoomPlugin({selector: 'a > img'}),
     ],
