@@ -390,7 +390,7 @@ MyBatis提供的拦截器接口可以方便用户自由扩展编写各种插件�
 
 ###### 2.1.21 修改MyBatis的配置文件
 
-```
+```xml
 <plugins>
     <!-- com.github.pagehelper为PageHelper类所在包名 -->
     <plugin interceptor="com.github.pagehelper.PageInterceptor">
