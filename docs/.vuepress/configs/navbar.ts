@@ -29,12 +29,6 @@ export const navbar: NavbarConfig = [
                 ],
             },
             {
-                text: '插件',
-                children: [
-                    '/md/java/base/plugin/i18n.md',
-                ],
-            },
-            {
                 text: '漏洞',
                 children: [
                     '/md/java/base/vulnerability/dos.md',
@@ -49,6 +43,7 @@ export const navbar: NavbarConfig = [
                 text: 'spring-framework',
                 children: [
                     '/md/java/spring/spring-framework/spring-framework-source.md',
+                    '/md/java/base/plugin/i18n.md',
                 ],
             },
         ],

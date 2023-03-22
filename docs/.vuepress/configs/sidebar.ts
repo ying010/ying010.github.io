@@ -26,6 +26,7 @@ export const sidebar: SidebarConfig = {
           text: 'spring-framework',
           children: [
             '/md/java/spring/spring-framework/spring-framework-source.md',
+            '/md/java/base/plugin/i18n.md',
           ],
         },
       ]
@@ -62,13 +63,6 @@ export const sidebar: SidebarConfig = {
       children: [
         '/md/java/base/jvm/model.md',
         '/md/java/base/jvm/oom.md',
-      ],
-    },
-    {
-      text: '插件',
-      collapsible: true,
-      children: [
-        '/md/java/base/plugin/i18n.md',
       ],
     },
     {
