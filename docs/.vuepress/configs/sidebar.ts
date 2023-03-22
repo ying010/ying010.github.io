@@ -26,7 +26,7 @@ export const sidebar: SidebarConfig = {
           text: 'spring-framework',
           children: [
             '/md/java/spring/spring-framework/spring-framework-source.md',
-            '/md/java/base/plugin/i18n.md',
+            '/md/java/spring/spring-framework/i18n.md',
           ],
         },
       ]
