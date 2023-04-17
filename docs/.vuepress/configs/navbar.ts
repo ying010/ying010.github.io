@@ -2,23 +2,6 @@ import type {NavbarConfig} from '@vuepress/theme-default'
 
 export const navbar: NavbarConfig = [
     {
-        text: '总览',
-        children: [
-            {
-                text: '学习路线',
-                children: [
-                    '/md/base/study-line/README.md',
-                ],
-            },
-            {
-                text: '学习规划',
-                children: [
-                    '/md/base/annual-planning/2023.md',
-                ],
-            },
-        ],
-    },
-    {
         text: 'JAVA',
         children: [
             {
@@ -80,7 +63,6 @@ export const navbar: NavbarConfig = [
                 text: '基础知识',
                 children: [
                     '/md/study/basic/algorithm.md',
-                    '/md/study/basic/design-pattern.md',
                 ],
             },
         ]
@@ -119,12 +101,6 @@ export const navbar: NavbarConfig = [
                     '/md/using/vuepress/getting-started.md',
                     '/md/using/vuepress/default-theme.md',
                     '/md/using/vuepress/plugins.md',
-                ],
-            },
-            {
-                text: '开发项目',
-                children: [
-                    '/md/using/project-build/project-framework.md',
                 ],
             },
         ],

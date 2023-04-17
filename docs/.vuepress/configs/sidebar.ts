@@ -78,7 +78,6 @@ export const sidebar: SidebarConfig = {
       text: '基础知识',
       children: [
         '/md/study/basic/algorithm.md',
-        '/md/study/basic/design-pattern.md',
       ],
     },
   ],
