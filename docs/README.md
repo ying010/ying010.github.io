@@ -2,13 +2,6 @@
 home: true
 title: 首页
 heroImage: /images/hero.png
-actions:
-- text: 语言学习
-  link: /md/study/README.md
-  type: primary
-- text: 工具使用
-  link: /md/tools/IDE/IDEA/getting-started.md
-  type: secondary
 features:
   - title: 简洁至上
     details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
