@@ -57,17 +57,6 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: '其他',
-        children:[
-            {
-                text: '基础知识',
-                children: [
-                    '/md/study/basic/algorithm.md',
-                ],
-            },
-        ]
-    },
-    {
         text: '工具',
         children: [
             {
@@ -130,5 +119,16 @@ export const navbar: NavbarConfig = [
                 ],
             },
         ],
+    },
+    {
+        text: '其他',
+        children:[
+            {
+                text: '基础知识',
+                children: [
+                    '/md/study/basic/algorithm.md',
+                ],
+            },
+        ]
     },
 ]

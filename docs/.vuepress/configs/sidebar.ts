@@ -84,6 +84,7 @@ export const sidebar: SidebarConfig = {
   '/md/tools/': [
     {
       text: '开发工具',
+      collapsible: true,
       children: [
         '/md/tools/IDE/IDEA/getting-started.md',
         '/md/tools/IDE/IDEA/keymap.md',
@@ -92,12 +93,14 @@ export const sidebar: SidebarConfig = {
     },
     {
       text: 'Linux',
+      collapsible: true,
       children: [
         '/md/tools/Linux/command.md',
       ],
     },
     {
       text: 'npm',
+      collapsible: true,
       children: [
         '/md/tools/npm/npm.md',
       ],
@@ -106,6 +109,7 @@ export const sidebar: SidebarConfig = {
   '/md/using/': [
       {
         text: 'VuePress',
+        collapsible: true,
         children: [
           '/md/using/vuepress/getting-started.md',
           '/md/using/vuepress/default-theme.md',
@@ -114,24 +118,28 @@ export const sidebar: SidebarConfig = {
       },
     {
       text: '开发项目',
+      collapsible: true,
       children: [
         '/md/using/project-build/project-framework.md',
       ],
     },
     {
       text: '环境配置',
+      collapsible: true,
       children: [
         '/md/using/environment_configuration.md',
       ],
     },
     {
       text: '错误信息',
+      collapsible: true,
       children: [
         '/md/using/error/shell_error.md',
       ],
     },
     {
       text: 'arthas',
+      collapsible: true,
       children: [
         '/md/using/debug/arthas/简介.md',
         '/md/using/debug/arthas/入门.md',
