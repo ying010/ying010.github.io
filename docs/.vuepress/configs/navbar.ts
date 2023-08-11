@@ -26,7 +26,17 @@ export const navbar: NavbarConfig = [
                 text: 'spring-framework',
                 children: [
                     '/md/java/spring/spring-framework/spring-framework-source.md',
-                    '/md/java/spring/spring-framework/i18n.md',
+                ],
+            },
+            {
+                text: '插件',
+                children: [
+                    {
+                        text: '国际化',
+                        children: [
+                            '/md/java/spring/spring-framework/plugin/i18n-start.md',
+                        ],
+                    },
                 ],
             },
         ],
