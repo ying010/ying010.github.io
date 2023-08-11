@@ -11,9 +11,9 @@ features:
     details: redis、Kafka、Mybatis、Mybatis-plus等
   - title: 工具合集
     details: IDEA、Linux、npm等工具的使用经验
-  - title: 项目搭建
-    details: 灵活的插件API，使得插件可以为你的站点提供许多即插即用的功能。
-  - title: 打包工具
-    details: 默认的打包工具是 Vite ，也同样支持 Webpack 。选一个你喜欢的来使用吧！
+  - title: 开发实践
+    details: 介绍开发过程中用到的实用工具、插件，环境搭建等
+  - title: 其他
+    details: 其他一些有价值的知识
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---

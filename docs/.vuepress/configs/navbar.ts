@@ -31,12 +31,7 @@ export const navbar: NavbarConfig = [
             {
                 text: '插件',
                 children: [
-                    {
-                        text: '国际化',
-                        children: [
-                            '/md/java/spring/plugin/i18n-start.md',
-                        ],
-                    },
+                    '/md/java/spring/plugin/i18n-start.md',
                 ],
             },
         ],
