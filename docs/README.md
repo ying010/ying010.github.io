@@ -1,7 +1,7 @@
 ---
 home: true
 title: 首页
-heroImage: https://raw.githubusercontent.com/ying010/pic-repo/master/img/2023/08/10/20230810184338.png
+heroImage: https://raw.githubusercontent.com/ying010/pic-repo/master/img/2023/08/11/20230811094454.png
 features:
   - title: 简洁至上
     details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
