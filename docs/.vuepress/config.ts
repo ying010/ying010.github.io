@@ -13,8 +13,8 @@ export default defineUserConfig({
     locales: {
         '/': {
             lang: 'zh-CN',
-            title: 'VuePress2',
-            description: 'Just playing around',
+            title: '个人文档',
+            description: '学习并记录',
         },
     },
 

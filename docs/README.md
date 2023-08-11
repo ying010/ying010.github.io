@@ -3,15 +3,15 @@ home: true
 title: 首页
 heroImage: https://raw.githubusercontent.com/ying010/pic-repo/master/img/2023/08/11/20230811094454.png
 features:
-  - title: 简洁至上
-    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-  - title: Vue 驱动
-    details: 享受 Vue 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。
-  - title: 高性能
-    details: VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
-  - title: 主题
-    details: 提供了一个开箱即用的默认主题。你也可以挑选一个社区主题，或者创建一个你自己的主题。
-  - title: 插件
+  - title: Java基础
+    details: Java基础知识，JVM，语言特性等
+  - title: Spring框架
+    details: Spring-framework、Spring-boot、Spring-cloud、插件等，记录实用案例与源码解析
+  - title: 中间件
+    details: redis、Kafka、Mybatis、Mybatis-plus等
+  - title: 工具合集
+    details: IDEA、Linux、npm等工具的使用经验
+  - title: 项目搭建
     details: 灵活的插件API，使得插件可以为你的站点提供许多即插即用的功能。
   - title: 打包工具
     details: 默认的打包工具是 Vite ，也同样支持 Webpack 。选一个你喜欢的来使用吧！

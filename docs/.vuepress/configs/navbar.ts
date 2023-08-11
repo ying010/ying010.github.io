@@ -34,7 +34,7 @@ export const navbar: NavbarConfig = [
                     {
                         text: '国际化',
                         children: [
-                            '/md/java/spring/spring-framework/plugin/i18n-start.md',
+                            '/md/java/spring/plugin/i18n-start.md',
                         ],
                     },
                 ],
@@ -92,19 +92,6 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: '项目搭建',
-        children: [
-            {
-                text: 'VuePress',
-                children: [
-                    '/md/using/vuepress/getting-started.md',
-                    '/md/using/vuepress/default-theme.md',
-                    '/md/using/vuepress/plugins.md',
-                ],
-            },
-        ],
-    },
-    {
         text: '开发实践',
         children: [
             {
@@ -126,6 +113,14 @@ export const navbar: NavbarConfig = [
                     '/md/using/debug/arthas/入门.md',
                     '/md/using/debug/arthas/最佳实践.md',
                     '/md/using/debug/arthas/原理解析.md',
+                ],
+            },
+            {
+                text: 'VuePress搭建',
+                children: [
+                    '/md/using/vuepress/getting-started.md',
+                    '/md/using/vuepress/default-theme.md',
+                    '/md/using/vuepress/plugins.md',
                 ],
             },
         ],

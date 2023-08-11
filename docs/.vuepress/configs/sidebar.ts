@@ -31,8 +31,8 @@ export const sidebar: SidebarConfig = {
         {
           text: '插件',
           children: [
-            '/md/java/spring/spring-framework/plugin/i18n-start.md',
-            '/md/java/spring/spring-framework/plugin/i18n-source.md',
+            '/md/java/spring/plugin/i18n-start.md',
+            '/md/java/spring/plugin/i18n-source.md',
           ],
         },
       ]
