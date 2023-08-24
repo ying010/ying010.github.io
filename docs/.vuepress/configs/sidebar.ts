@@ -1,22 +1,6 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
 
 export const sidebar: SidebarConfig = {
-  '/md/base/': [
-    {
-      text: '学习路线',
-      collapsible: true,
-      children: [
-        '/md/base/study-line/README.md',
-      ],
-    },
-    {
-      text: '学习规划',
-      collapsible: true,
-      children: [
-        '/md/base/annual-planning/2023.md',
-      ],
-    },
-  ],
   '/md/java/': [
     {
       text: 'Spring',
@@ -79,11 +63,19 @@ export const sidebar: SidebarConfig = {
       ],
     },
   ],
-  '/md/study/basic/': [
+  '/md/basic/': [
     {
-      text: '基础知识',
+      text: '算法',
+      collapsible: true,
       children: [
-        '/md/study/basic/algorithm.md',
+        '/md/basic/algorithm/algorithm.md',
+      ],
+    },
+    {
+      text: '设计模式',
+      collapsible: true,
+      children: [
+        '/md/basic/design-pattern/design-pattern.md',
       ],
     },
   ],
@@ -113,15 +105,15 @@ export const sidebar: SidebarConfig = {
     },
   ],
   '/md/using/': [
-      {
-        text: 'VuePress',
-        collapsible: true,
-        children: [
-          '/md/using/vuepress/getting-started.md',
-          '/md/using/vuepress/default-theme.md',
-          '/md/using/vuepress/plugins.md',
-        ],
-      },
+    {
+      text: 'VuePress',
+      collapsible: true,
+      children: [
+        '/md/using/vuepress/getting-started.md',
+        '/md/using/vuepress/default-theme.md',
+        '/md/using/vuepress/plugins.md',
+      ],
+    },
     {
       text: '开发项目',
       collapsible: true,
@@ -151,6 +143,22 @@ export const sidebar: SidebarConfig = {
         '/md/using/debug/arthas/入门.md',
         '/md/using/debug/arthas/最佳实践.md',
         '/md/using/debug/arthas/原理解析.md',
+      ],
+    },
+  ],
+  '/md/others/': [
+    {
+      text: '学习路线',
+      collapsible: true,
+      children: [
+        '/md/others/study-line/README.md',
+      ],
+    },
+    {
+      text: '学习规划',
+      collapsible: true,
+      children: [
+        '/md/others/annual-planning/2023.md',
       ],
     },
   ],

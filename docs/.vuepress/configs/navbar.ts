@@ -121,12 +121,18 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: '其他',
+        text: '基础知识',
         children:[
             {
-                text: '基础知识',
+                text: '算法',
                 children: [
-                    '/md/study/basic/algorithm.md',
+                    '/md/basic/algorithm/algorithm.md',
+                ],
+            },
+            {
+                text: '设计模式',
+                children: [
+                    '/md/basic/design-pattern/design-pattern.md',
                 ],
             },
         ]
