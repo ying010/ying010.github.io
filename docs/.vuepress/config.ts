@@ -21,11 +21,11 @@ export default defineUserConfig({
     markdown: {headers: {level: [1,2,3,4,5,6]}},
 
     head: [
-        ['link', {rel: 'ico', href: 'https://vuejs.org/images/logo.png'}],
+        ['link', {rel: 'ico', href: 'https://raw.githubusercontent.com/ying010/pic-repo/master/img/2023/08/11/20230811094454.png'}],
     ],
 
     theme: defaultTheme({
-        logo: 'https://vuejs.org/images/logo.png',
+        logo: 'https://raw.githubusercontent.com/ying010/pic-repo/master/img/2023/08/11/20230811094454.png',
 
         locales: {
             "/": {
