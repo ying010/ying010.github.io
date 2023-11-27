@@ -5,6 +5,12 @@ export const navbar: NavbarConfig = [
         text: 'JAVA',
         children: [
             {
+                text: 'JAVA',
+                children: [
+                    '/md/java/base/拷贝.md',
+                ],
+            },
+            {
                 text: 'JVM',
                 children: [
                     '/md/java/base/jvm/model.md',

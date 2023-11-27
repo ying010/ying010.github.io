@@ -3,6 +3,13 @@ import type {SidebarConfig} from '@vuepress/theme-default'
 export const sidebar: SidebarConfig = {
   '/md/java/': [
     {
+      text: 'Java',
+      collapsible: true,
+      children: [
+          "/md/java/base/拷贝.md"
+      ]
+    },
+    {
       text: 'Spring',
       collapsible: true,
       children: [
