@@ -14,7 +14,7 @@ VuePress 诞生的初衷是为了支持 Vue.js 及其子项目的文档需求，
 
 - [Node.js v12+](../environment_configuration.md#安装Node-js)
 
-- [Yarn v1](/md/using/environment_configuration.md#安装yarn) （可选）
+- [Yarn v1](/vp2Note/md/using/environment_configuration.md#安装yarn) （可选）
 
   ::: extend
 
