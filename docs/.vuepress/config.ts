@@ -9,7 +9,7 @@ import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import {sidebar, navbar} from './configs'
 
 export default defineUserConfig({
-    base: '/vp2Note/',
+    base: '/',
     locales: {
         '/': {
             lang: 'zh-CN',
