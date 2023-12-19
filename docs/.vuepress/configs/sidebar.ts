@@ -88,7 +88,14 @@ export const sidebar: SidebarConfig = {
   ],
   '/md/tools/': [
     {
-      text: '开发工具',
+      text: '开发部署工具',
+      collapsible: true,
+      children: [
+        '/md/tools/development/maven.md',
+      ],
+    },
+    {
+      text: '开发工具IDE',
       collapsible: true,
       children: [
         '/md/tools/IDE/IDEA/getting-started.md',

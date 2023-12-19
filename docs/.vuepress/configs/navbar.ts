@@ -71,7 +71,13 @@ export const navbar: NavbarConfig = [
         text: '工具',
         children: [
             {
-                text: '开发工具',
+                text: '开发部署工具',
+                children: [
+                    '/md/tools/development/maven.md',
+                ],
+            },
+            {
+                text: '开发工具IDE',
                 children: [
                     '/md/tools/IDE/IDEA/getting-started.md',
                     '/md/tools/IDE/IDEA/keymap.md',
