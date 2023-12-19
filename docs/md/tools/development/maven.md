@@ -14,7 +14,7 @@
 
 因为上述的传递依赖项目包含的库将会变得非常大且会有一些不必要的依赖，为此maven有一些附加功能限制依赖项：
 
-- **依赖策略 - **决定多个版本作为依赖时选择哪个版本。Maven选择“就近原则”。如果两个依赖项版本在依赖树中处于相同深度则选择先声明的。**需要注意的是始终可以在项目POM文件中显示声明依赖来确定版本。**
+- 依赖策略 - 决定多个版本作为依赖时选择哪个版本。Maven选择“就近原则”。如果两个依赖项版本在依赖树中处于相同深度则选择先声明的。**需要注意的是始终可以在项目POM文件中显示声明依赖来确定版本。**
 
   ```
     A 
@@ -38,7 +38,7 @@
     └── D 2.0      
   ```
 
-- **依赖管理(dependencyManagement) - ** 允许项目在传递依赖出现问题(如：版本冲突)或依赖未指定版本时直接指定要使用的版本。在上面的例子中A显示引用了D，所以即使A未使用D也会将其加入到A中。此时可以选择在A的`dependencyManagement`添加D并直接控制D的版本。
+- 依赖管理(dependencyManagement) -  允许项目在传递依赖出现问题(如：版本冲突)或依赖未指定版本时直接指定要使用的版本。在上面的例子中A显示引用了D，所以即使A未使用D也会将其加入到A中。此时可以选择在A的`dependencyManagement`添加D并直接控制D的版本。
 
   ```xml
   <dependencyManagement>
@@ -54,9 +54,9 @@
 
   上述示例中设置了`commons-logging`的版本为`1.2`。因为`log`是非常基础的依赖许多项目中都依赖它很容易出现版本冲突，这样设置之后会强制设置`commons-logging`的版本为`1.2`可以方便的解决冲突。
 
-- **依赖范围(scope) - **允许设置依赖项生效的构建阶段。在标签`scope`中设置，下面有详细介绍。
+- 依赖范围(scope) - 允许设置依赖项生效的构建阶段。在标签`scope`中设置，下面有详细介绍。
 
-- **排除依赖项(exclusion) - **如果项目 X 依赖项目 Y，并且项目 Y 依赖项目 Z，则项目 X 的所有者可以使用“exclusion”元素显式排除项目 Z 作为依赖项。
+- 排除依赖项(exclusion) - 如果项目 X 依赖项目 Y，并且项目 Y 依赖项目 Z，则项目 X 的所有者可以使用“exclusion”元素显式排除项目 Z 作为依赖项。
 
   ```xml
   <dependency>
@@ -73,7 +73,7 @@
 
   上述示例展示了项目依赖`spring-boot-starter`但不依赖`spring-boot-starter`中的`spring-boot-starter-logging`。
 
-- **可选依赖项(optional) - **如果项目 Y 依赖项目 Z，则项目 Y 的所有者可以使用`optional`元素将项目 Z 标记为可选依赖项。此时当项目 X 依赖项目 Y 时，X 将仅依赖 Y，而不依赖 Y 的可选依赖项 Z。然后，项目 X 的所有者可以根据自己的选择显式添加对 Z 的依赖项。
+- 可选依赖项(optional) - 如果项目 Y 依赖项目 Z，则项目 Y 的所有者可以使用`optional`元素将项目 Z 标记为可选依赖项。此时当项目 X 依赖项目 Y 时，X 将仅依赖 Y，而不依赖 Y 的可选依赖项 Z。然后，项目 X 的所有者可以根据自己的选择显式添加对 Z 的依赖项。
 
   ```xml
   <!--common项目-->
@@ -112,7 +112,7 @@
 
   `demo-common`依赖`junit`时设置了`optional`为`true`限制了`junit`只被`demo-common`依赖不会传递，所以`demo-web`依赖`demo-common`但不会依赖`junit`。
 
-::: tips
+::: tip
 
 尽管传递依赖项可以隐式包含所需的依赖项，但显式指定源代码直接使用的依赖项是一个好习惯。这种最佳实践证明了它的价值，特别是当项目的依赖项更	改其依赖项时。
 
@@ -216,7 +216,7 @@ scope元素主要用来指定依赖的传递性，依赖范围即依赖在哪些
   </dependencies>
   ```
 
-  ::: tips spring-boot实战
+  ::: tip spring-boot实战
   
   在使用spring-boot开发时通常的做法是将`parent`设为`spring-boot-starter-parent`。但如果是有企业标准的`parent`或更想显示声明所有Maven配置，就可以通过`import` `spring-boot-dependencies`来使用`spring-boot`的依赖管理。
   
