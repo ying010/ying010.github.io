@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7616e3a4","path":"/md/tools/DNF/ddxoft.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"DD 虚拟键码对照表","slug":"dd-虚拟键码对照表","link":"#dd-虚拟键码对照表","children":[]}],"git":{},"filePathRelative":"md/tools/DNF/ddxoft.md"}');export{t as data};

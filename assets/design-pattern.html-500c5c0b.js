@@ -1,0 +1,1 @@
+import{_ as t,n as a,p as n,Q as e,s}from"./framework-76e35361.js";const r={},c=e("h1",{id:"设计模式",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#设计模式","aria-hidden":"true"},"#"),s(" 设计模式")],-1),o=[c];function _(d,i){return a(),n("div",null,o)}const l=t(r,[["render",_],["__file","design-pattern.html.vue"]]);export{l as default};
