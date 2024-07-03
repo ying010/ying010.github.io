@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-d03be576","path":"/md/tools/npm/npm.html","title":"npm","lang":"zh-CN","frontmatter":{},"headers":[{"level":1,"title":"npm","slug":"npm","link":"#npm","children":[{"level":2,"title":"npm全局安装路径","slug":"npm全局安装路径","link":"#npm全局安装路径","children":[]}]}],"git":{},"filePathRelative":"md/tools/npm/npm.md"}');export{e as data};

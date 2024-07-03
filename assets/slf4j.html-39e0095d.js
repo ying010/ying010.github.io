@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-1152f431","path":"/md/java/base/log/slf4j.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"md/java/base/log/slf4j.md"}');export{a as data};

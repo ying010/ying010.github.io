@@ -1,0 +1,1 @@
+import{_ as r,n as t,p as a,Q as e,s as o}from"./framework-76e35361.js";const c={},s=e("h1",{id:"项目基本骨架",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#项目基本骨架","aria-hidden":"true"},"#"),o(" 项目基本骨架")],-1),n=[s];function _(d,i){return t(),a("div",null,n)}const l=r(c,[["render",_],["__file","project-framework.html.vue"]]);export{l as default};

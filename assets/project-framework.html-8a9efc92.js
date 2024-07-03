@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-ca5234e4","path":"/md/using/project-build/project-framework.html","title":"项目基本骨架","lang":"zh-CN","frontmatter":{},"headers":[{"level":1,"title":"项目基本骨架","slug":"项目基本骨架","link":"#项目基本骨架","children":[]}],"git":{},"filePathRelative":"md/using/project-build/project-framework.md"}');export{e as data};

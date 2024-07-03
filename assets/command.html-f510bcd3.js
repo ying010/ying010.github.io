@@ -1,0 +1,9 @@
+import{_ as e,n as s,p as a,a0 as n}from"./framework-76e35361.js";const l={},i=n(`<h1 id="linux命令" tabindex="-1"><a class="header-anchor" href="#linux命令" aria-hidden="true">#</a> Linux命令</h1><ul><li><code> stat \${fileName}</code> 查看文件新建信息</li><li><code>-daemon</code>启动守护进程</li></ul><p><strong>文件上传</strong></p><p><code>rz -E</code>,如果rz命令未安装可以使用<code>yum -y install lrzsz</code>安装</p><p><strong>安装Java:</strong></p><p>解压后配置环境变量:<code>vim /etc/profile</code></p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/usr/local/java/jdk1.8.0_181
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token variable">$JAVA_HOME</span>/bin:<span class="token environment constant">$PATH</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>查看jdk版本 <code>java -version</code></p><p><strong>VIM安装</strong></p><p><code>yum -y install vim*</code></p><p><strong>防火墙</strong></p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code>//检查防火墙状态
+firewall-cmd <span class="token parameter variable">--state</span>
+//关闭防火墙
+systemctl stop firewalld
+//开启防火墙
+systemctl start firewalld
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,12),t=[i];function c(o,d){return s(),a("div",null,t)}const p=e(l,[["render",c],["__file","command.html.vue"]]);export{p as default};
